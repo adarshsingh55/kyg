@@ -53,7 +53,34 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 640px) {
+  .header {
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 60px;
+    padding: 0 1rem;
+  }
+  .title {
+    font-size: 1.2rem;
+  }
+  .search {
+    display: none;
+  }
+  .right {
+    gap: 0.8rem;
+  }
+  .icon {
+    font-size: 1.2rem;
+  }
+  .avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 641px) {
   .header {
     left: 60px;
     height: 64px;

@@ -86,8 +86,56 @@
   margin-top: 0.5rem;
 }
 
+.text {
+  display: inline;
+}
+
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 640px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: auto;
+    border-right: none;
+    border-top: 1px solid #e5e7eb;
+    padding: 0.5rem 0;
+  }
+  .sidelink {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+    padding: 0.5rem 0;
+  }
+  .logo {
+    display: none;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .link {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.9rem;
+  }
+  .text {
+    display: none;
+  }
+  .bottom {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 641px) {
   .sidebar {
     width: 60px;
     padding-left: 0.2rem;
