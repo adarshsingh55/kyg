@@ -1,0 +1,150 @@
+.sidebar {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.section {
+  padding: 1.25rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section h3 {
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.item {
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.item:hover {
+  background-color: #e8eef5;
+}
+
+.itemTitle {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.85rem;
+  color: #1a1a1a;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.itemMeta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.3rem;
+}
+
+.count {
+  font-size: 0.75rem;
+  color: #666;
+  background: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+.amount {
+  font-size: 0.8rem;
+  color: #f5576c;
+  font-weight: 600;
+  background: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+.status {
+  font-size: 0.75rem;
+  color: #4ecdc4;
+  background: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.delay {
+  font-size: 0.8rem;
+  color: #ff6b6b;
+  font-weight: 600;
+  background: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+.reason {
+  display: block;
+  font-size: 0.75rem;
+  color: #999;
+  font-style: italic;
+}
+
+.ward {
+  font-size: 0.75rem;
+  color: #666;
+  background: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+.flag {
+  display: block;
+  font-size: 0.8rem;
+  color: #f44336;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section {
+    border-bottom: 1px solid #e9ecef;
+    border-right: 1px solid #e9ecef;
+  }
+
+  .section:nth-child(2n) {
+    border-right: none;
+  }
+
+  .section:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    border-right: none;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  .section:last-child {
+    border-bottom: none;
+  }
+}

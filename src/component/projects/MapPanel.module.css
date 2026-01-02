@@ -1,0 +1,132 @@
+.mapPanel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mapPlaceholder {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+}
+
+.mapHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.mapHeader h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.backButton {
+  padding: 0.5rem 1rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.backButton:hover {
+  background: #5568d3;
+}
+
+.mapContent {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.stateGrid,
+.districtGrid,
+.wardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stateButton,
+.districtButton,
+.wardButton {
+  padding: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stateButton:hover,
+.districtButton:hover,
+.wardButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.stateButton:active,
+.districtButton:active,
+.wardButton:active {
+  transform: translateY(0);
+}
+
+.projectMarkers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.marker {
+  padding: 1rem;
+  background: #f0f4ff;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+  color: #222;
+}
+
+.marker:hover {
+  background: #667eea;
+  color: white;
+  transform: scale(1.05);
+}
+
+.noProjects {
+  color: #999;
+  text-align: center;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .mapHeader {
+    padding: 1rem;
+  }
+
+  .mapContent {
+    padding: 1rem;
+  }
+
+  .stateGrid,
+  .districtGrid,
+  .wardGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.75rem;
+  }
+}

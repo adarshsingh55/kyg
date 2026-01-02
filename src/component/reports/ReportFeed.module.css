@@ -1,0 +1,52 @@
+.feedContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feedInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.5rem 0;
+}
+
+.feedInfo h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #1a1a1a;
+}
+
+.feedInfo p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.feedInfo strong {
+  color: #1a1a1a;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+}
+
+.noResults {
+  background: white;
+  border: 2px dashed #d9d9d9;
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #999;
+}
+
+.noResults p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.noResults p:first-child {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}

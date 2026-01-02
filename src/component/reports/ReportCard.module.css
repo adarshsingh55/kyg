@@ -1,0 +1,153 @@
+.card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s;
+  border-left: 4px solid #1890ff;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateX(4px);
+}
+
+.cardHeader {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.typeIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.summary {
+  margin: 0 0 1.25rem 0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  padding-left: 2.5rem;
+}
+
+.metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.icon {
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.label {
+  font-weight: 600;
+  color: #666;
+  min-width: 80px;
+}
+
+.value {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.link {
+  color: #1890ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.confidence {
+  font-weight: 600;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.typeLabel {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background: #e3f2fd;
+  color: #1890ff;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.readMore {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid #1890ff;
+  color: #1890ff;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.readMore:hover {
+  background: #1890ff;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .summary {
+    padding-left: 0;
+  }
+
+  .cardHeader {
+    gap: 0.75rem;
+  }
+
+  .title {
+    font-size: 1.05rem;
+  }
+
+  .metadata {
+    padding: 0.75rem;
+  }
+
+  .cardFooter {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+}

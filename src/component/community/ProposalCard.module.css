@@ -1,0 +1,224 @@
+.card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.cardHeader {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.categoryIcon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.description {
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  padding-left: 2.8rem;
+}
+
+.metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.metaItem span:first-child {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.label {
+  font-weight: 600;
+  color: #666;
+  min-width: 80px;
+}
+
+.value {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.statsSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.stat .icon {
+  font-size: 1.2rem;
+}
+
+.stat .count {
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 1.1rem;
+}
+
+.stat .label {
+  font-size: 0.75rem;
+  color: #999;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.supportBtn,
+.viewBtn {
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.supportBtn {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #4caf50;
+}
+
+.supportBtn:hover:not(:disabled) {
+  background: #4caf50;
+  color: white;
+}
+
+.supportBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.supportBtn.supported {
+  background: #4caf50;
+  color: white;
+  border-color: #2e7d32;
+}
+
+.viewBtn {
+  background: transparent;
+  color: #667eea;
+  border: 1px solid #667eea;
+}
+
+.viewBtn:hover {
+  background: #667eea;
+  color: white;
+}
+
+.categoryBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.4rem 0.75rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1.25rem;
+  }
+
+  .cardHeader {
+    gap: 0.75rem;
+  }
+
+  .title {
+    font-size: 1.05rem;
+  }
+
+  .description {
+    padding-left: 0;
+  }
+
+  .statsSection {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .stats {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .supportBtn,
+  .viewBtn {
+    flex: 1;
+  }
+
+  .categoryBadge {
+    position: static;
+    width: fit-content;
+    margin-top: 1rem;
+  }
+}
