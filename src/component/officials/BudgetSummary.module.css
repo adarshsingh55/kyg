@@ -1,22 +1,22 @@
 .sidebar {
-  background: white;
+  background: var(--bg-primary);
   border-radius: 8px;
   padding: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
 }
 
 .sidebar h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.25rem;
-  color: #1a1a1a;
-  border-bottom: 2px solid #e9ecef;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 1rem;
 }
 
 .subtitle {
   margin: 0;
   font-size: 0.85rem;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 1rem;
 }
 
@@ -57,15 +57,15 @@
 
 .deptItem {
   padding: 1rem;
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
-  background: #fafbfc;
+  background: var(--bg-primary);
 }
 
 .deptName {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
@@ -89,7 +89,7 @@
 .progressBar {
   width: 100%;
   height: 6px;
-  background-color: #e9ecef;
+  background-color: var(--bg-secondary);
   border-radius: 3px;
   overflow: hidden;
   margin-bottom: 0.35rem;
@@ -104,7 +104,7 @@
 
 .percentage {
   font-size: 0.75rem;
-  color: #666;
+  color: var(--text-secondary);
   text-align: right;
 }
 
@@ -131,7 +131,7 @@
 
 .infoBox {
   padding: 0.75rem;
-  background: #f6f8fb;
+  background: var(--bg-secondary);
   border-radius: 6px;
   margin-bottom: 1rem;
 }
@@ -139,7 +139,7 @@
 .infoBox h4 {
   margin: 0 0 0.5rem 0;
   font-size: 0.85rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
 }
 
 .infoBox ul {
@@ -150,7 +150,7 @@
 
 .infoBox li {
   font-size: 0.8rem;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 0.3rem;
   display: flex;
   align-items: center;
@@ -163,7 +163,142 @@
 
 .source {
   font-size: 0.75rem;
-  color: #999;
+  color: var(--text-secondary);
   padding-top: 1rem;
-  border-top: 1px solid #e9ecef;
+  border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    padding: 1.25rem;
+  }
+
+  .sidebar h3 {
+    font-size: 1.1rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .totalBox {
+    gap: 0.5rem;
+  }
+
+  .totalItem {
+    padding: 0.6rem;
+  }
+
+  .totalItem span {
+    font-size: 0.7rem;
+  }
+
+  .totalItem strong {
+    font-size: 1rem;
+  }
+
+  .departments {
+    gap: 0.75rem;
+  }
+
+  .deptItem {
+    padding: 0.75rem;
+  }
+
+  .deptName {
+    font-size: 0.8rem;
+  }
+
+  .deptAmount {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 1rem;
+  }
+
+  .sidebar h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .subtitle {
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .totalBox {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .totalItem {
+    padding: 0.6rem;
+  }
+
+  .totalItem span {
+    font-size: 0.65rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .totalItem strong {
+    font-size: 0.95rem;
+  }
+
+  .departments {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .deptItem {
+    padding: 0.6rem;
+  }
+
+  .deptName {
+    font-size: 0.75rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .deptAmount {
+    font-size: 0.7rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .progressBar {
+    height: 5px;
+    margin-bottom: 0.25rem;
+  }
+
+  .percentage {
+    font-size: 0.7rem;
+  }
+
+  .btn {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .infoBox {
+    padding: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .infoBox h4 {
+    font-size: 0.75rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .infoBox li {
+    font-size: 0.7rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .source {
+    font-size: 0.7rem;
+    padding-top: 0.75rem;
+  }
 }

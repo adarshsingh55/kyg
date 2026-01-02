@@ -3,8 +3,9 @@
   flex-direction: column;
   gap: 1.5rem;
   padding: 2rem;
-  background-color: #f8f9fa;
+  background-color: var(--bg-page);
   min-height: 100vh;
+  transition: background-color 0.3s ease;
 }
 
 .header {
@@ -33,9 +34,10 @@
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
   padding: 1.5rem;
-  background: white;
+  background: var(--bg-primary);
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
 }
 
 .contextGroup {
@@ -47,7 +49,7 @@
 .contextGroup label {
   font-weight: 600;
   font-size: 0.85rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -55,28 +57,29 @@
 .contextGroup select,
 .contextGroup input {
   padding: 0.75rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   font-size: 0.95rem;
   font-family: inherit;
-  background-color: white;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   transition: border-color 0.2s;
 }
 
 .contextGroup input::placeholder {
-  color: #ccc;
+  color: var(--text-tertiary);
 }
 
 .contextGroup select:hover,
 .contextGroup input:hover {
-  border-color: #1890ff;
+  border-color: #667eea;
 }
 
 .contextGroup select:focus,
 .contextGroup input:focus {
   outline: none;
-  border-color: #1890ff;
-  box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.1);
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
 /* Actions Row */
@@ -86,9 +89,10 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background: white;
+  background: var(--bg-primary);
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
 }
 
 .sortGroup {
@@ -100,21 +104,22 @@
 .sortGroup label {
   font-weight: 600;
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .sortGroup select {
   padding: 0.6rem 0.75rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   font-size: 0.9rem;
-  background-color: white;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   cursor: pointer;
 }
 
 .sortGroup select:hover,
 .sortGroup select:focus {
-  border-color: #1890ff;
+  border-color: #667eea;
 }
 
 .primaryButton {
@@ -167,6 +172,10 @@
     font-size: 1.5rem;
   }
 
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
   .contextBar {
     grid-template-columns: 1fr;
   }
@@ -183,6 +192,51 @@
 
   .primaryButton {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.25rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .contextBar {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .contextGroup label {
+    font-size: 0.75rem;
+  }
+
+  .contextGroup select,
+  .contextGroup input {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .actionsRow {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .primaryButton {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
   }
 }
 

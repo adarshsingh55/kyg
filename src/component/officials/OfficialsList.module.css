@@ -6,13 +6,13 @@
 
 .count {
   font-size: 0.95rem;
-  color: #666;
+  color: var(--text-secondary);
   padding: 0.5rem 0;
 }
 
 .count strong {
   font-size: 1.1rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
 }
 
 .list {
@@ -22,10 +22,10 @@
 }
 
 .card {
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   padding: 1.5rem;
-  background: #fafbfc;
+  background: var(--bg-primary);
   transition: all 0.2s;
 }
 
@@ -40,7 +40,7 @@
   gap: 1rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .avatar {
@@ -64,14 +64,14 @@
 .name {
   margin: 0;
   font-size: 1.1rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-weight: 600;
 }
 
 .position {
   margin: 0.4rem 0 0 0;
   font-size: 0.85rem;
-  color: #1890ff;
+  color: #667eea;
   font-weight: 500;
 }
 
@@ -83,7 +83,7 @@
   display: block;
   font-size: 0.8rem;
   font-weight: 600;
-  color: #666;
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 0.4rem;
@@ -92,7 +92,7 @@
 .section p {
   margin: 0;
   font-size: 0.9rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   line-height: 1.5;
 }
 
@@ -101,22 +101,79 @@
   flex-direction: column;
   gap: 0.6rem;
   padding-top: 1rem;
-  border-top: 1px solid #e9ecef;
+  border-top: 1px solid var(--border-color);
   font-size: 0.85rem;
 }
 
 .experience {
-  color: #666;
+  color: var(--text-secondary);
   font-weight: 500;
 }
 
 .phone {
-  color: #1890ff;
+  color: #667eea;
   font-weight: 500;
 }
 
 @media (max-width: 768px) {
   .list {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .listContainer {
+    gap: 0.75rem;
+  }
+
+  .count {
+    font-size: 0.85rem;
+  }
+
+  .list {
+    gap: 0.75rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .cardHeader {
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .avatar {
+    width: 44px;
+    height: 44px;
+    font-size: 0.8rem;
+  }
+
+  .name {
+    font-size: 0.95rem;
+  }
+
+  .position {
+    font-size: 0.75rem;
+  }
+
+  .section {
+    margin-bottom: 1rem;
+  }
+
+  .section label {
+    font-size: 0.7rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .section p {
+    font-size: 0.85rem;
+  }
+
+  .footer {
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    font-size: 0.75rem;
   }
 }

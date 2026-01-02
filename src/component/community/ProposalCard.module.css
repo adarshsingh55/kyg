@@ -1,6 +1,6 @@
 .card {
-  background: white;
-  border: 1px solid #e9ecef;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1rem;
@@ -11,9 +11,260 @@
 }
 
 .card:hover {
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-lg);
   border-color: #667eea;
   transform: translateY(-2px);
+}
+
+.cardHeader {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.categoryIcon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.description {
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-left: 2.8rem;
+}
+
+.metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 6px;
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--border-color-light);
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.metaItem span:first-child {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  min-width: 80px;
+}
+
+.value {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.statsSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.stat .icon {
+  font-size: 1.2rem;
+}
+
+.stat .count {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.stat .label {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.supportBtn,
+.viewBtn {
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.supportBtn {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #4caf50;
+}
+
+.supportBtn:hover:not(:disabled) {
+  background: #4caf50;
+  color: white;
+}
+
+.supportBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.supportBtn.supported {
+  background: #4caf50;
+  color: white;
+  border-color: #2e7d32;
+}
+
+.viewBtn {
+  background: transparent;
+  color: #667eea;
+  border: 1px solid #667eea;
+}
+
+.viewBtn:hover {
+  background: #667eea;
+  color: white;
+}
+
+.categoryBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.4rem 0.75rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1.25rem;
+  }
+
+  .cardHeader {
+    gap: 0.75rem;
+  }
+
+  .title {
+    font-size: 1.05rem;
+  }
+
+  .description {
+    padding-left: 0;
+  }
+
+  .statsSection {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .stats {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .supportBtn,
+  .viewBtn {
+    flex: 1;
+  }
+
+  .categoryBadge {
+    position: static;
+    width: fit-content;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .title {
+    font-size: 0.95rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+    padding-left: 0;
+  }
+
+  .metadata {
+    padding: 0.75rem;
+    gap: 0.4rem;
+  }
+
+  .metaItem {
+    font-size: 0.75rem;
+  }
+
+  .statsSection {
+    gap: 0.75rem;
+  }
+
+  .stats {
+    gap: 1rem;
+  }
+
+  .stat .count {
+    font-size: 0.95rem;
+  }
+
+  .supportBtn,
+  .viewBtn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
 }
 
 .cardHeader {

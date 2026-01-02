@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: white;
+  background: var(--bg-primary);
 }
 
 .mapHeader {
@@ -17,14 +17,14 @@
   align-items: center;
   gap: 1rem;
   padding: 1.5rem;
-  border-bottom: 1px solid #e5e7eb;
-  background: #f9fafb;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-secondary);
 }
 
 .mapHeader h3 {
   margin: 0;
   font-size: 1.3rem;
-  color: #222;
+  color: var(--text-primary);
 }
 
 .backButton {
@@ -93,13 +93,13 @@
 
 .marker {
   padding: 1rem;
-  background: #f0f4ff;
+  background: var(--bg-secondary);
   border: 2px solid #667eea;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
   font-size: 0.9rem;
-  color: #222;
+  color: var(--text-primary);
 }
 
 .marker:hover {
@@ -109,7 +109,7 @@
 }
 
 .noProjects {
-  color: #999;
+  color: var(--text-secondary);
   text-align: center;
   padding: 2rem;
 }
@@ -128,5 +128,58 @@
   .wardGrid {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mapHeader {
+    padding: 0.75rem;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .mapHeader h3 {
+    font-size: 1.1rem;
+  }
+
+  .backButton {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .mapContent {
+    padding: 0.75rem;
+  }
+
+  .stateGrid,
+  .districtGrid,
+  .wardGrid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .stateButton,
+  .districtButton,
+  .wardButton {
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .projectMarkers {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+  }
+
+  .marker {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .noProjects {
+    padding: 1rem;
+    font-size: 0.9rem;
   }
 }

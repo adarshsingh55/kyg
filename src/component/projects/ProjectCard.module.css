@@ -1,6 +1,6 @@
 .projectCard {
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
@@ -69,7 +69,7 @@
 
 .value {
   font-size: 0.9rem;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .budgetInfo {
@@ -80,13 +80,13 @@
 
 .budgetText {
   font-size: 0.85rem;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .progressBar {
   width: 100%;
   height: 8px;
-  background: #e5e7eb;
+  background: var(--bg-secondary);
   border-radius: 4px;
   overflow: hidden;
 }
@@ -100,7 +100,7 @@
 
 .budgetPercent {
   font-size: 0.8rem;
-  color: #999;
+  color: var(--text-secondary);
 }
 
 .officersList {
@@ -120,8 +120,8 @@
 
 .cardFooter {
   padding: 1rem;
-  border-top: 1px solid #e5e7eb;
-  background: #fafbfc;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-secondary);
 }
 
 .viewButton {
@@ -164,5 +164,68 @@
 
   .infoRow {
     margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectCard {
+    min-height: auto;
+  }
+
+  .cardHeader {
+    padding: 0.6rem;
+    gap: 0.5rem;
+  }
+
+  .projectName {
+    font-size: 0.9rem;
+  }
+
+  .statusBadge {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+  }
+
+  .cardBody {
+    padding: 0.6rem;
+  }
+
+  .infoRow {
+    margin-bottom: 0.5rem;
+    gap: 0.3rem;
+  }
+
+  .label {
+    font-size: 0.8rem;
+  }
+
+  .value {
+    font-size: 0.85rem;
+  }
+
+  .budgetText {
+    font-size: 0.8rem;
+  }
+
+  .progressBar {
+    height: 6px;
+  }
+
+  .budgetPercent {
+    font-size: 0.75rem;
+  }
+
+  .officerBadge {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .cardFooter {
+    padding: 0.75rem;
+  }
+
+  .viewButton {
+    padding: 0.6rem;
+    font-size: 0.85rem;
   }
 }

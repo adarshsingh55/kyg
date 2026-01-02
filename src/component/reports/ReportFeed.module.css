@@ -14,17 +14,18 @@
 .feedInfo h2 {
   margin: 0;
   font-size: 1.4rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 .feedInfo p {
   margin: 0;
   font-size: 0.95rem;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .feedInfo strong {
-  color: #1a1a1a;
+  color: var(--text-primary);
 }
 
 .feed {
@@ -33,12 +34,40 @@
 }
 
 .noResults {
-  background: white;
-  border: 2px dashed #d9d9d9;
+  background: var(--bg-primary);
+  border: 2px dashed var(--border-color);
   border-radius: 8px;
   padding: 3rem 2rem;
   text-align: center;
-  color: #999;
+  color: var(--text-secondary);
+}
+
+.noResults p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.noResults p:first-child {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .feedContainer {
+    gap: 1rem;
+  }
+
+  .feedInfo h2 {
+    font-size: 1.1rem;
+  }
+
+  .feedInfo p {
+    font-size: 0.85rem;
+  }
+
+  .noResults {
+    padding: 2rem 1rem;
+  }
 }
 
 .noResults p {

@@ -1,7 +1,8 @@
 .reportsPage {
   padding: 2rem;
-  background-color: #f8f9fa;
+  background-color: var(--bg-page);
   min-height: 100vh;
+  transition: background-color 0.3s ease;
 }
 
 .header {
@@ -10,13 +11,14 @@
 
 .header h1 {
   font-size: 2.5rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 0.5rem 0;
+  font-weight: 700;
 }
 
 .header p {
   font-size: 1rem;
-  color: #666;
+  color: var(--text-secondary);
   margin: 0;
 }
 
@@ -58,7 +60,25 @@
     font-size: 1.8rem;
   }
 
+  .header p {
+    font-size: 0.9rem;
+  }
+
   .mainContent {
     gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reportsPage {
+    padding: 0.75rem;
+  }
+
+  .header h1 {
+    font-size: 1.4rem;
+  }
+
+  .header p {
+    font-size: 0.85rem;
   }
 }

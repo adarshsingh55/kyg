@@ -1,7 +1,8 @@
 .officialsPage {
   padding: 2rem;
-  background-color: #f8f9fa;
+  background-color: var(--bg-page);
   min-height: 100vh;
+  transition: background-color 0.3s ease;
 }
 
 .header {
@@ -11,13 +12,14 @@
 
 .header h1 {
   font-size: 2.5rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 0.5rem 0;
+  font-weight: 700;
 }
 
 .header p {
   font-size: 1rem;
-  color: #666;
+  color: var(--text-secondary);
   margin: 0;
 }
 
@@ -40,17 +42,19 @@
 }
 
 .section {
-  background: white;
+  background: var(--bg-primary);
   border-radius: 8px;
   padding: 2rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
 }
 
 .section h2 {
   font-size: 1.5rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 1.5rem 0;
-  border-bottom: 2px solid #e9ecef;
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 1rem;
 }
 
@@ -74,11 +78,42 @@
     font-size: 1.8rem;
   }
 
+  .header p {
+    font-size: 0.9rem;
+  }
+
   .mainContent {
     gap: 1rem;
   }
 
   .section {
     padding: 1.5rem;
+  }
+
+  .section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .officialsPage {
+    padding: 0.75rem;
+  }
+
+  .header h1 {
+    font-size: 1.4rem;
+  }
+
+  .header p {
+    font-size: 0.85rem;
+  }
+
+  .section {
+    padding: 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.1rem;
   }
 }

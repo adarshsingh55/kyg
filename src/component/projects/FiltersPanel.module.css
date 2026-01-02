@@ -16,14 +16,14 @@
 .header h3 {
   margin: 0;
   font-size: 1.2rem;
-  color: #222;
+  color: var(--text-primary);
 }
 
 .resetButton {
   padding: 0.4rem 0.8rem;
-  background: #f0f0f0;
-  color: #666;
-  border: 1px solid #ddd;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.85rem;
@@ -37,25 +37,25 @@
 }
 
 .filterSection {
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   overflow: hidden;
-  background: #fafbfc;
+  background: var(--bg-primary);
 }
 
 .sectionHeader {
   width: 100%;
   padding: 1rem;
-  background: #f9fafb;
+  background: var(--bg-secondary);
   border: none;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #222;
+  color: var(--text-primary);
   transition: background 0.2s;
 }
 
@@ -70,23 +70,23 @@
 
 .sectionContent {
   padding: 1rem;
-  background: white;
+  background: var(--bg-primary);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  color:black;
+  color: var(--text-primary);
 }
 
 .selectedItem {
   padding: 0.5rem 0;
   font-size: 0.9rem;
-  color: #444;
-  border-bottom: 1px solid #e5e7eb;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.5rem;
 }
 
 .placeholder {
-  color: #999;
+  color: var(--text-secondary);
   font-size: 0.9rem;
   margin: 0;
 }
@@ -124,14 +124,14 @@
   flex-direction: column;
   gap: 0.5rem;
   font-size: 0.9rem;
-  color: #444;
+  color: var(--text-primary);
 }
 
 .slider {
   width: 100%;
   height: 6px;
   border-radius: 3px;
-  background: #e5e7eb;
+  background: var(--bg-secondary);
   outline: none;
   -webkit-appearance: none;
 }
@@ -168,5 +168,86 @@
 
   .sectionContent {
     padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filtersPanel {
+    gap: 0.4rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .header h3 {
+    font-size: 1rem;
+  }
+
+  .resetButton {
+    width: 100%;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .filterSection {
+    margin-bottom: 0.4rem;
+  }
+
+  .sectionHeader {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .toggleIcon {
+    font-size: 0.75rem;
+  }
+
+  .sectionContent {
+    padding: 0.6rem;
+    gap: 0.5rem;
+  }
+
+  .selectedItem {
+    padding: 0.3rem 0;
+    font-size: 0.85rem;
+    padding-bottom: 0.3rem;
+  }
+
+  .checkboxLabel {
+    padding: 0.35rem;
+    font-size: 0.85rem;
+    gap: 0.5rem;
+  }
+
+  .checkboxLabel input {
+    width: 16px;
+    height: 16px;
+  }
+
+  .sliderContainer {
+    gap: 0.75rem;
+  }
+
+  .sliderContainer label {
+    font-size: 0.85rem;
+  }
+
+  .slider {
+    height: 5px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
   }
 }
